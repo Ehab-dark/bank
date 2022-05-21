@@ -37,11 +37,11 @@ if ($registrationForm.length) {
         customEmail: true,
       },
 
-      idNumber: {
+      loanvalue: {
         required: true,
         noSpace: true,
-        max: 11,
-        min: 11,
+        max: 10000000,
+        min: 1000000,
       },
 
       country: {
@@ -60,10 +60,10 @@ if ($registrationForm.length) {
         email: "Please enter valid email!",
       },
 
-      idNumber: {
+      loanvalue: {
         required: "Please enter idNumber!",
-        max: "الرجاء ادخال 11 رقم فقط",
-        min:"الرجاء ادخال 11 رقم"
+        max: "الرجاء ادخال 10 مليون على الاكثر",
+        min: "الرجاء ادخال مليون على الاقل",
       },
       lname: {
         required: "Please enter last name!",
