@@ -24,6 +24,13 @@ $.validator.addMethod(
   },
   "Letters, numbers, and underscores only please"
 );
+jQuery.validator.addMethod (
+  "Isidcardno", 
+  function (value, Element) {
+  return this.optional (Element) || Idcardnoutil.checkidcardno (value);
+  },
+  "Please enter your ID number correctly"
+  );
 var $registrationForm = $("#registration");
 if ($registrationForm.length) {
   $registrationForm.validate({
@@ -36,7 +43,10 @@ if ($registrationForm.length) {
         required: true,
         customEmail: true,
       },
-
+      card: {
+        Required:true,
+        Isidcardno:true
+      },
       loanvalue: {
         required: true,
         noSpace: true,
